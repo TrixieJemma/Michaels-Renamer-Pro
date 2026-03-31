@@ -12,13 +12,17 @@ Whether you're using **Plex**, **Jellyfin**, or **Emby**, MRP has you covered wi
 - **Local Cleanup Mode**: No internet? No problem. Clean your filenames even without an API key.
 - **Master Admin Bypasses**: Advanced controls for library owners.
 - **Safe Defaults**: It will *never* overwrite your data with "Not Found" errors.
-- **One-Click Linux Installer**: Setup is just two clicks away.
-
-## How to Install (2 Clicks)
+## Quick Start (Two Clicks)
 1. **Download** the MRP folder.
-2. **Right-click** on `installer.sh` and select **"Run as Program"**.
+2. **Right-click** on `setup.py` and select **"Open with Python"** (or run `python3 setup.py` in your terminal).
 
-That's it! Look on your Desktop, and you'll see the **Michael's Renamer Pro** shortcut ready to go.
+MRP will automatically install everything, create your Deskrop shortcut, and set the correct file permissions!
+
+## First Time Setup troubleshooting
+If the installer won't run, or the desktop shortcut won't open:
+- **Right-click** on `setup.py` (or the shortcut).
+- Select **Properties** -> **Permissions**.
+- Check the box for **"Allow executing file as program"**.
 
 ## How to get your API Key
 MRP is free/open-source, but it uses the **The Movie Database (TMDB)** for all its info. To get full episode titles and IDs:
