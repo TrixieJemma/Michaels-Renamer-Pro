@@ -13,20 +13,14 @@ Whether you're using **Plex**, **Jellyfin**, or **Emby**, MRP has you covered wi
 - **Master Admin Controls**: Advanced features for library owners.
 - **Safe Defaults**: MRP will *never* overwrite your data with errors.
 
-## Quick Start (Two Clicks)
-Installing MRP is as simple as installing any other app:
+## Quick Start (No Installation Required!)
+Installing MRP is now as simple as downloading a single file. No terminal, no Python, and no source code required.
 
-1. **Download** and extract the MRP folder.
-2. **Double-Click** on `setup.py` and wait a few seconds. 
-   *(If double-clicking doesn't work, **Right-Click** and select **"Open with Python"**)*.
+1. Go to the **Releases** tab on the right side of this GitHub page.
+2. Download the latest `michaels-renamer-pro.deb` installer file.
+3. Double-click the file and hit **Install**!
 
-That's it! MRP will automatically install everything it needs and place a shortcut right on your **Desktop**.
-
-## Troubleshooting
-If the installer won't run, or the desktop shortcut won't open:
-1. **Right-Click** on `setup.py` (or the shortcut).
-2. Select **Properties** -> **Permissions**.
-3. Check the box for **"Allow executing file as program"**.
+*(Linux Users: If double-clicking doesn't open the installer, Right-Click the file -> Properties -> Permissions -> Check "Allow executing file as program").*
 
 ## Getting Your TMDB Key
 MRP is free and open-source, but it uses **The Movie Database (TMDB)** for all its info. To get full episode titles and IDs:
