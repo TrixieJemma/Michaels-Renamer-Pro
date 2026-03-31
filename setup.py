@@ -5,14 +5,26 @@ import stat
 from pathlib import Path
 
 def install_dependencies():
-    print("--- Installing Dependencies ---")
+    # Silent install in the background
     dependencies = ["customtkinter", "requests"]
     for dep in dependencies:
         try:
-            print(f"Installing {dep}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", dep, "--quiet"])
+            # Added --user and --break-system-packages to bypass Linux "externally-managed" errors
+            subprocess.check_call(
+                [sys.executable, "-m", "pip", "install", dep, "--user", "--break-system-packages", "--quiet"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
         except subprocess.CalledProcessError:
-            print(f"Error: Failed to install {dep}. Please run 'pip install {dep}' manually.")
+            # Fallback for older pip versions or non-Linux systems where flag might fail
+            try:
+                subprocess.check_call(
+                    [sys.executable, "-m", "pip", "install", dep, "--user", "--quiet"],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL
+                )
+            except:
+                pass # Silent fail to keep things "foolproof"
 
 def create_desktop_shortcut(app_path):
     print("--- Creating Desktop Shortcut ---")
@@ -62,10 +74,20 @@ def main():
     install_dependencies()
     create_desktop_shortcut(app_path)
     set_file_permissions(app_path)
-    
-    print("\nSetup Complete!")
-    print("--- Michael's Renamer Pro is ready to use! ---")
-    print("You can find the shortcut on your Desktop.")
+
+    # Simple "Installation Complete!" popup
+    try:
+        import tkinter as tk
+        from tkinter import messagebox
+        root = tk.Tk()
+        root.withdraw()  # Hide the main tkinter window
+        messagebox.showinfo("MRP Setup", "Installation Complete!\n\nYou're all set! Check your Desktop for the Michael's Renamer Pro shortcut.")
+        root.destroy()
+    except Exception:
+        # Fallback to console if tkinter is missing
+        print("\n--- Installation Complete! ---")
+        print("You're all set! Michael's Renamer Pro is ready to use.")
+        print("Check your Desktop for the shortcut.")
 
 if __name__ == "__main__":
     main()

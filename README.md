@@ -1,37 +1,40 @@
-# MRP (Michael's Renamer Pro)
+# Michael's Renamer Pro (MRP)
 
 **Wrangle your massive media library in seconds.**
 
 ## What is MRP?
-MRP is a labor of love developed for a 40TB+ library. It's a "Hobbyist Pro" tool that meticulously cleans and renames your messy show folders into professional, Plex-ready files. 
+MRP is a labor of love developed for anyone managing a large media library. It's a "Hobbyist Pro" tool that meticulously cleans and renames your show folders into professional, Plex-ready files. 
 
 Whether you're using **Plex**, **Jellyfin**, or **Emby**, MRP has you covered with custom presets and a bulletproof renaming engine.
 
 ## Features
 - **Strictly TMDB**: Only the highest quality metadata.
 - **Local Cleanup Mode**: No internet? No problem. Clean your filenames even without an API key.
-- **Master Admin Bypasses**: Advanced controls for library owners.
-- **Safe Defaults**: It will *never* overwrite your data with "Not Found" errors.
+- **Master Admin Controls**: Advanced features for library owners.
+- **Safe Defaults**: MRP will *never* overwrite your data with errors.
+
 ## Quick Start (Two Clicks)
-1. **Download** the MRP folder.
-2. **Right-click** on `setup.py` and select **"Open with Python"** (or run `python3 setup.py` in your terminal).
+Installing MRP is as simple as installing any other app:
 
-MRP will automatically install everything, create your Deskrop shortcut, and set the correct file permissions!
+1. **Download** and extract the MRP folder.
+2. **Double-Click** on `setup.py` and wait a few seconds. 
+   *(If double-clicking doesn't work, **Right-Click** and select **"Open with Python"**)*.
 
-## First Time Setup troubleshooting
+That's it! MRP will automatically install everything it needs and place a shortcut right on your **Desktop**.
+
+## Troubleshooting
 If the installer won't run, or the desktop shortcut won't open:
-- **Right-click** on `setup.py` (or the shortcut).
-- Select **Properties** -> **Permissions**.
-- Check the box for **"Allow executing file as program"**.
+1. **Right-Click** on `setup.py` (or the shortcut).
+2. Select **Properties** -> **Permissions**.
+3. Check the box for **"Allow executing file as program"**.
 
-## How to get your API Key
-MRP is free/open-source, but it uses the **The Movie Database (TMDB)** for all its info. To get full episode titles and IDs:
+## Getting Your TMDB Key
+MRP is free and open-source, but it uses **The Movie Database (TMDB)** for all its info. To get full episode titles and IDs:
 1. Go to [The Movie Database Settings](https://www.themoviedb.org/settings/api).
-2. Create a free account.
-3. Request an API Key (v3 auth).
-4. Paste that key into the MRP sidebar and hit **Verify Key**.
+2. Create a free account and request an **API Key (v3 auth)**.
+3. Paste that key into the MRP sidebar and hit **Verify Key**.
 
 ## Support the Project
-MRP is a hobby project, not a business! If it helped you save hours of work, consider [buying me a coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=acmike200@gmail.com&item_name=MRP+Hobby+Project+Support&currency_code=USD) to keep the project alive. 
+MRP is a hobby project, not a business! If it helped you save hours of work, consider [buying me a coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=acmike200@gmail.com&item_name=MRP+Hobby+Project+Support&currency_code=USD) to keep the project alive.
 
 I appreciate the support from the community!
